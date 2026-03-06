@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Tester</title>
+
+<style>
+body{
+font-family:Arial;
+margin:0;
+display:flex;
+height:100vh;
+}
+
+textarea{
+width:50%;
+padding:10px;
+font-family:monospace;
+}
+
+iframe{
+width:50%;
+border:none;
+}
+
+button{
+position:absolute;
+top:10px;
+left:10px;
+padding:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<textarea id="code">
+<h1>Hello Telegram</h1>
+<p>Test HTML here</p>
+</textarea>
+
+<iframe id="preview"></iframe>
+
+<button onclick="run()">RUN</button>
+
+<script>
+function run(){
+let code = document.getElementById("code").value;
+document.getElementById("preview").srcdoc = code;
+}
+</script>
+
+</body>
+</html>
